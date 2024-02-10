@@ -1,8 +1,19 @@
 ﻿using System;
 using System.IO;
 
+/// <summary>
+/// Utility class that provides helper methods for input handling.
+/// </summary>
 class Utility
 {
+    /// <typeparam name="T">The type of the input value.</typeparam>
+    /// <param name="Parser">The parser function that converts the input string to the desired type.</param>
+    /// <param name="Prompt">The prompt to display to the user.</param>
+    /// <param name="ErrorPrompt">The prompt to display when the input is invalid.</param>
+    /// <returns>The parsed input value.</returns>
+    /// <summary>
+    /// Gets input from the user and parses it to the desired type.
+    /// </summary>
     public static T GetInput<T>(Func<string, T> Parser, string Prompt, string ErrorPrompt = "Please enter a valid input!")
     {
         if (!Prompt.EndsWith(": "))
@@ -251,7 +262,7 @@ class Program
 
     }
 
-    static void Main()
+    static void Main(string[] args)
     {
         // Question1();
         // Question2();
